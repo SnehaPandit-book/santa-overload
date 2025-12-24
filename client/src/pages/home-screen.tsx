@@ -9,6 +9,7 @@ import { CookieClicker } from "@/components/CookieClicker";
 import { scenarios, ScenarioKey } from "@/lib/scenarios";
 import { cn } from "@/lib/utils";
 import cuteSanta from "@assets/generated_images/cute_friendly_santa_character_art.png";
+import christmasTree from "@assets/generated_images/festive_decorated_christmas_tree.png";
 
 export default function HomeScreen() {
   const [, setLocation] = useLocation();
@@ -26,6 +27,34 @@ export default function HomeScreen() {
       <Snowfall />
       <ChristmasMusic />
       <CookieClicker />
+      
+      {/* Christmas Tree Background */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
+        transition={{ delay: 0.1 }}
+        className="fixed left-4 top-1/2 transform -translate-y-1/2 w-48 h-96 z-5 pointer-events-none"
+      >
+        <img
+          src={christmasTree}
+          alt="Christmas Tree"
+          className="w-full h-full object-contain filter brightness-110"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
+        transition={{ delay: 0.15 }}
+        className="fixed right-4 top-1/2 transform -translate-y-1/2 w-48 h-96 z-5 pointer-events-none"
+      >
+        <img
+          src={christmasTree}
+          alt="Christmas Tree"
+          className="w-full h-full object-contain filter brightness-110 scale-x-[-1]"
+        />
+      </motion.div>
+      
       <div className="crt-overlay fixed inset-0 z-50 pointer-events-none opacity-20" />
 
       {/* Header */}
