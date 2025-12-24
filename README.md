@@ -1,7 +1,7 @@
 ## Live Version on Replit
 
 You can try this project online using Replit:  
-[Open Santa Overload on Replit](https://replit.com/@YourUsername/Santa-Overload)
+[Open Santa Overload on Replit](https://replit.com/@snehapanditarca/Santa-Overload)
 # Santa Overload Project
 
 Description:
