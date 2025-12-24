@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Snowfall } from "@/components/Snowfall";
+import { CookieClicker } from "@/components/CookieClicker";
 import { cn } from "@/lib/utils";
 import { scenarios, ScenarioKey } from "@/lib/scenarios";
 import pixelSanta from "@assets/generated_images/pixel_art_santa_glitch_face.png";
@@ -112,6 +113,7 @@ export default function Experience() {
       )}
     >
       <Snowfall />
+      <CookieClicker />
       <div className="crt-overlay fixed inset-0 z-50 pointer-events-none opacity-20" />
 
       {/* Header */}
