@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Snowfall } from "@/components/Snowfall";
+import { ChristmasMusic } from "@/components/ChristmasMusic";
 import { scenarios, ScenarioKey } from "@/lib/scenarios";
 import { cn } from "@/lib/utils";
 import pixelSanta from "@assets/generated_images/pixel_art_santa_glitch_face.png";
@@ -22,6 +23,7 @@ export default function HomeScreen() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 relative overflow-hidden bg-gradient-to-b from-red-900 to-green-900">
       <Snowfall />
+      <ChristmasMusic />
       <div className="crt-overlay fixed inset-0 z-50 pointer-events-none opacity-20" />
 
       {/* Header */}
