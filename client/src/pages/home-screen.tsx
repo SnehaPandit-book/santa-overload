@@ -5,9 +5,10 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Snowfall } from "@/components/Snowfall";
 import { ChristmasMusic } from "@/components/ChristmasMusic";
+import { CookieClicker } from "@/components/CookieClicker";
 import { scenarios, ScenarioKey } from "@/lib/scenarios";
 import { cn } from "@/lib/utils";
-import pixelSanta from "@assets/generated_images/pixel_art_santa_glitch_face.png";
+import cuteSanta from "@assets/generated_images/cute_friendly_santa_character_art.png";
 
 export default function HomeScreen() {
   const [, setLocation] = useLocation();
@@ -24,6 +25,7 @@ export default function HomeScreen() {
     <div className="min-h-screen w-full flex flex-col items-center justify-center p-4 relative overflow-hidden bg-gradient-to-b from-red-900 to-green-900">
       <Snowfall />
       <ChristmasMusic />
+      <CookieClicker />
       <div className="crt-overlay fixed inset-0 z-50 pointer-events-none opacity-20" />
 
       {/* Header */}
@@ -52,15 +54,27 @@ export default function HomeScreen() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2 }}
-        className="mb-12 z-10 relative"
+        className="mb-8 z-10 relative"
       >
-        <div className="w-32 h-32 border-4 border-primary rounded-lg overflow-hidden shadow-2xl">
+        <div className="w-40 h-40 border-4 border-primary rounded-lg overflow-hidden shadow-2xl hover:scale-105 transition-transform">
           <img
-            src={pixelSanta}
+            src={cuteSanta}
             alt="Santa"
-            className="w-full h-full object-cover filter contrast-125"
+            className="w-full h-full object-cover"
           />
         </div>
+      </motion.div>
+
+      {/* Special Message */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="bg-card/80 border-4 border-card-foreground px-6 py-4 rounded-lg mb-8 max-w-lg text-center z-10 relative shadow-lg"
+      >
+        <p className="font-comic text-sm text-card-foreground font-bold leading-relaxed">
+          "Wherever you are, I'm here always to help you. I am the Santa."
+        </p>
       </motion.div>
 
       {/* Scenario Cards */}
